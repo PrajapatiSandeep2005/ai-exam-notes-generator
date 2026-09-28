@@ -17,7 +17,7 @@ export default function ChatDashboard({ token, onLogout, isDark, onToggleTheme }
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/v1/chat/history', {
+        const response = await fetch('https://ai-exam-notes-generator.onrender.com/api/v1/chat/history', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`, // Pass the token for authentication
@@ -59,7 +59,7 @@ export default function ChatDashboard({ token, onLogout, isDark, onToggleTheme }
 
     try {
       // 1. Make the POST request to your Express server
-      const response = await fetch('http://localhost:3000/api/v1/chat/message', {
+      const response = await fetch('https://ai-exam-notes-generator.onrender.com/api/v1/chat/message', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -100,7 +100,7 @@ export default function ChatDashboard({ token, onLogout, isDark, onToggleTheme }
   const downloadResponse = async (content, index) => {
     setDownloadingMessage(index);
     try {
-      const response = await fetch('http://localhost:3000/api/v1/chat/download-pdf', {
+      const response = await fetch('https://ai-exam-notes-generator.onrender.com/api/v1/chat/download-pdf', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify({ title: 'AI Exam Notes', content }),

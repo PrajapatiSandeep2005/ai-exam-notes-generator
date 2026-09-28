@@ -10,7 +10,7 @@ const app = express();
 
 // 2. Configure CORS middleware (must be before routes)
 app.use(cors({
-    origin: "http://localhost:5173", // Replace with your exact Vite frontend URL
+    origin: " https://ai-exam-notes-generator-drlm.onrender.com", // Replace with your exact Vite frontend URL
     credentials: true, // Crucial for accepting and setting cookies
 }));
 

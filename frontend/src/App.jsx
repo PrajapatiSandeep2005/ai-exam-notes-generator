@@ -29,7 +29,7 @@ export default function App() {
 
   const handleLogout = async () => {
     try {
-      await fetch('http://localhost:3000/api/v1/auth/logout', {
+      await fetch('https://ai-exam-notes-generator.onrender.com/api/v1/auth/logout', {
         method: 'POST',
         credentials: 'include',
       });
@@ -58,7 +58,7 @@ export default function App() {
       : { username: formData.username, email: formData.email, password: formData.password };
 
     try {
-      const response = await fetch(`http://localhost:3000${endpoint}`, {
+      const response = await fetch(`https://ai-exam-notes-generator.onrender.com${endpoint}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
