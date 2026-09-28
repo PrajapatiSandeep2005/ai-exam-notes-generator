@@ -1,0 +1,5 @@
+mongo db : 
+username : prajapatisandeepkumar2005_db_user
+password : KrqpIPnnJJBpM8rS
+
+connection string: mongodb+srv://prajapatisandeepkumar2005_db_user:KrqpIPnnJJBpM8rS@cluster0.mtuorkv.mongodb.net/
